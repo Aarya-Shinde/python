@@ -1,5 +1,5 @@
-'''
-user wants bloof fonation, 
+''' Problem statement -
+user wants blood donation, 
 criteria
 if 21 greater age- less than 50
 then only ask weight 
@@ -7,8 +7,11 @@ then only ask weight
     donate blood
    else wight is not matching)
 
-else (your age is not matching)    
+else (your age is not matching)
+
+code runner, sqlite viewer
 '''
+
 
 print("Welcome to blood Donation");
 

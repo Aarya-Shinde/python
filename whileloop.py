@@ -6,12 +6,12 @@
 #     i -= 1;
 
 # print("Enter the number you want table of-")
-# multiple = input();
-# type(multiple)
+# num = input();
+# type(num)
 
 # i = 1
 # while i <= 10 :
-#     print(multiple * i );
+#     print(num * i );
 #     i += 1;
 
 

@@ -18,17 +18,21 @@ Enter the Move:
         Enter the following Credentials for Registration:
         ''');
         username = input("Enter your Username - ");
-        password = input("\nEnter your PassWord - ");
 
-        confpassword = input("\nEnter your Pass Word again - ");
+        while True :
 
-        if password == confpassword :
-                print("Password Matches");
-                print("\n Registration Successful");
+            password = input("\nEnter your PassWord - ");
+            confpassword = input("\nEnter your Pass Word again - ");
 
-                database.update({username : password})
-                break;
-        else :
+            if password == confpassword :
+                    print("Password Matches");
+                    print("\n Registration Successful");
+
+                    #Updates 
+
+                    database.update({username : password})
+                    break;
+            else :
                 print("Password dosen't match");
          
       
@@ -37,20 +41,23 @@ Enter the Move:
         print('''
         Enter your following Credentials:
         ''');
-        username = input("\nEnter your Username - ");
+
+        while True :
              
-        if username in database :
-            password = input("Enter your Password: ")
-            if database[username] == password :
-                  print("Login Sucessfull");
+            username = input("\nEnter your Username - ");
+                
+            if username in database :
+                password = input("Enter your Password: ");
+
+                if database[username] == password :
+                    print("Login Sucessfull!!!");
+                    exit();
+                else :
+                    print ("Password dosen't match, Please try again!")
             else :
-                  print ("Password dosen't match")
-        else :
-             print ("Login failed");
-        break;
-    
-    
-    else : 
-        print("PLEASE TRY AGAIN!!");
+                print("User name dosen't match, Please Try again!")
+    else :
+        print ("Login failed, PLEASE TRY AGAIN!!");
+        
          
 print(database);

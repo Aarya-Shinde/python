@@ -1,7 +1,1 @@
-
-# for i in range(1 , 11) :
-#     if i ==6 :
-#         break;
-#     else :
-#         print(i);
-# print("Program Finished");
+guess = input(f"Guess the no between 1 to {end}: ");

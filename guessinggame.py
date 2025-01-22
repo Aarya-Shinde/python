@@ -10,12 +10,14 @@ while True :
             3. Hard  ''')
     
     end = 0;
-    guess = 0;
-    ans = 0;
+    ans =0;
+    attempts = 3;
 
     level = int(input('Enter your move\n'));
 
     # If else statement for level selection
+
+    
 
     if level == 1 :
 
@@ -23,14 +25,20 @@ while True :
         end = 30;
         print(ans);
 
-        guess = int(input(f"Guess the no between 1 to {end}: "));
-           
-        if  guess == ans :
-            print ("!!!Congrats that is correct!!");
-            break;    
-                            
-        else : 
-            print("Wrong Answer, Try Again");                       
+        for attempt in range (1 , 4) :
+
+            guess = int(input(f"Guess the no between 1 to {end}: "));
+            
+            if  guess == ans :
+                print ("!!!Congrats that is correct!!");
+                break;    
+                                
+            else : 
+                print("Wrong Answer, Try Again");  
+                print(f"You have {3- attempt} chance left.");
+                attempt -= 1;
+                
+
 
     elif level == 2 :
 
@@ -38,25 +46,43 @@ while True :
         end = 60;
         print(ans);
 
-        guess = int(input(f"Guess the no between 1 to {end}: "));
-           
-        if  guess == ans :
-            print ("!!!Congrats that is correct!!");
-            break;    
-                            
-        else : 
-            print("Wrong Answer, Try Again");
-             
+        for attempt in range (1 , 4) :
+
+                    guess = int(input(f"Guess the no between 1 to {end}: "));
+                    print(attempt);
+                    
+                    if  guess == ans :
+                        print ("!!!Congrats that is correct!!");
+                        break;    
+                                        
+                    else : 
+                        print("Wrong Answer, Try Again"); 
+                        print(attempt) ;
+                        print(f"You have {3- attempt} chance left.");
+                        attempt -= 1;
         
     elif level == 3 :
 
         print(f"You have selected hard level  \n");
         end = 100;
-        break;
+        print(ans);
+
+        for attempt in range (1 , 4) :
+
+            guess = int(input(f"Guess the no between 1 to {end}: "));
+            
+            if  guess == ans :
+                print ("!!!Congrats that is correct!!");
+                break;    
+                                
+            else : 
+                print("Wrong Answer, Try Again");  
+                print(f"You have {3- attempt} chance left.");
+                attempt -= 1;      
             
     else :
             print("Invalid Input, Please try again!!\n4");
 
-guess = input(f"Guess the no between 1 to {end}: ");
+    # guess = input(f"Guess the no between 1 to {end}: ");
 
-ans = random.randint(1, end);
+    ans = random.randint(1, end);

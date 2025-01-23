@@ -24,8 +24,10 @@ else :
             flag = False;
    
 
-if flag == True :
-  print("It is anagram")
+# if flag == True :
+#   print("It is anagram")
 
-else :
-  print("It is not a anagram")
+# else :
+#   print("It is not a anagram")
+
+print("Anagram" if flag == True else "Not anagram");
